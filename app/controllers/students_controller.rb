@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  #before_action :set_student, only: :show
+  before_action :set_student, only: :show
   
   def index
     @students = Student.all
@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  # private
+  private
 
   def activate
     @student = Student.find(params[:id])
